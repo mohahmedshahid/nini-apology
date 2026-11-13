@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe3ef">
+<title>I'm Sorry Nini ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--pink:#f7a9c8;--deep:#b83f75;--ink:#713d57;--paper:#fff9fc;--rose:#ffe3ef}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 10%,#fff 0 8%,transparent 28%),linear-gradient(135deg,#fff0f6,#ffdce9 55%,#fff4f8);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#e88db3 1px,transparent 1px);background-size:24px 24px}
+main{position:relative;z-index:1;width:min(920px,92%);margin:0 auto;padding:34px 0 58px}
+.topline{text-align:center;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:#bd6b8d}
+.hero{text-align:center;padding:18px 12px 26px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #f3bfd3;background:#ffffffa8;padding:9px 15px;border-radius:999px;font-size:.8rem;color:#a94f78}
+h1,h2{font-family:'Playfair Display',Georgia,serif;color:var(--deep);margin:15px 0}
+h1{font-size:clamp(2.7rem,8vw,5rem);line-height:1.02}
+.subtitle{font-size:1.04rem;color:#98627b}
+.hero-art{font-size:3.3rem;letter-spacing:.15em;margin:10px 0 2px;filter:drop-shadow(0 7px 8px #d77fa044)}
+.card{background:#ffffffd9;border:1px solid #f7c9db;border-radius:28px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 55px #b94c791c;backdrop-filter:blur(8px)}
+.letter-title{text-align:center;font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;color:#b83f75;margin:0 0 24px}
+.letter p{font-size:1rem;line-height:1.9;margin:0 0 17px}
+.letter .signoff{text-align:center;color:#b83f75;font-weight:700;margin-top:24px}
+.letter .final{font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;text-align:center;color:#b83f75;margin-top:26px}
+.section{text-align:center;margin:40px 0 17px}
+.section h2{font-size:2rem;margin-bottom:7px}
+.section p{margin:0;color:#98627b}
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.gift{border:1px solid #f4c3d6;background:#fff9fc;border-radius:20px;padding:20px 12px;color:var(--ink);font:600 1rem 'DM Sans',sans-serif;cursor:pointer;transition:.2s;min-height:112px}
+.gift:hover,.gift.selected{transform:translateY(-3px);border-color:#d96f9b;background:#fff0f6;box-shadow:0 9px 22px #d96f9b26}
+.gift .emoji{display:block;font-size:2rem;margin-bottom:8px}
+.gift small{display:block;font-weight:400;color:#a56d85;margin-top:4px}
+.choice{display:none;text-align:center;margin-top:18px;padding:16px;border-radius:16px;background:#fff0f6;color:#a33d70;line-height:1.6}
+.choice.show{display:block}
+.choice strong{display:block;font-family:'Playfair Display',serif;font-size:1.2rem}
+.sorry-cta{text-align:center;margin-top:28px}
+.primary,.back{border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(135deg,#d95f91,#b83f75);color:white;font:700 .98rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 9px 20px #b83f7530;transition:.2s}
+.primary:hover,.back:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.note{font-size:.82rem;color:#a56d85;margin-top:12px}
+#sorryPage{display:none}
+.sorry-header{text-align:center;padding:18px 0 25px}
+.sorry-header h1{font-size:clamp(2.3rem,7vw,4rem)}
+.sorry-header p{color:#98627b}
+.sorry-cloud{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.sorry-word{background:#fff2f7;border:1px solid #f6c8da;border-radius:12px;text-align:center;padding:12px 4px;color:#b34878;font-weight:700;font-size:clamp(.8rem,2vw,1rem);transform:rotate(var(--tilt))}
+.sorry-bottom{text-align:center;margin:30px auto 0;max-width:600px;line-height:1.8}
+.sorry-bottom strong{font-family:'Playfair Display',serif;color:#b83f75;font-size:1.45rem;display:block;margin-bottom:8px}
+.back{margin-top:20px;background:#fff;color:#b83f75;border:1px solid #efb5cd;box-shadow:none}
+footer{text-align:center;padding:30px 0 0;color:#b17a91;font-size:.82rem}
+.heart{position:fixed;bottom:-30px;color:#e58bb0;opacity:.45;animation:float 12s linear infinite;z-index:0;pointer-events:none}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media(max-width:620px){main{padding-top:22px}.gifts{grid-template-columns:repeat(2,1fr)}.sorry-cloud{grid-template-columns:repeat(3,1fr);gap:7px}.sorry-word{padding:11px 2px}.letter p{font-size:.96rem;line-height:1.8}}
+</style>
+</head>
+<body>
+<div class="heart" style="left:8%;animation-delay:0s">♡</div><div class="heart" style="left:27%;animation-delay:4s;font-size:1.5rem">♥</div><div class="heart" style="left:72%;animation-delay:2s">♡</div><div class="heart" style="left:91%;animation-delay:7s;font-size:1.6rem">♥</div>
+<main>
+<section id="homePage">
+  <div class="topline">A little page made with love</div>
+  <header class="hero">
+    <div class="eyebrow">♡ just for you Nini ♡</div>
+    <div class="hero-art" aria-hidden="true">🧸 🌷 💗</div>
+    <h1>I'm Sorry Nini</h1>
+    <div class="subtitle">To my prettiest princess in the whole world</div>
+  </header>
+
+  <article class="card letter">
+    <h2 class="letter-title">My Dearest Nini ❤️</h2>
+    <p>Jaan I am genuinely so so sorry for yelling. I know I made a huge mistake and I hate that my actions made you feel hurt or scared. I never ever wanted to make you feel that way and I feel terrible knowing that I did.</p>
+    <p>I only said your name out loud because I was genuinely shocked. I wasn't trying to yell at you or make you feel bad in any way. But I understand that it came across differently and that it hurt you. I should have been more careful and I am truly sorry for that.</p>
+    <p>My pretty princess dictator please forgive this man. You deserve to be treated with the utmost love and gentleness. You deserve to feel safe and comfortable with me always. I never want to be the reason you feel scared or upset.</p>
+    <p>Jaan you are genuinely one of the prettiest things in my entire world. You are prettier than all the angels in the universe. Your smile is more beautiful than anything I could ever describe and I wish I could make you see yourself through my eyes just once. You are so precious to me and I hope you never forget that.</p>
+    <p>I promise to be more mindful of how I speak and how my actions affect you. I don't want to just say sorry. I want to show you that I mean it through the way I treat you.</p>
+    <p>I love you so much Jaan. I am sorry for making you feel this way. Please don't think for even a second that I take your feelings lightly. They matter to me more than you know.</p>
+    <p>Please forgive me Nini. I am sending you the biggest hug and a million kisses.</p>
+    <p class="final">I LOVE YOU MY PRETTIEST PRINCESS ❤️</p>
+    <p class="signoff">Forever your sorry man 🥺</p>
+  </article>
+
+  <section class="section">
+    <h2>One more thing Jaan 🎀</h2>
+    <p>What would make my princess happy?</p>
+  </section>
+  <div class="gifts" id="giftGrid">
+    <button class="gift" data-choice="Teddy Bear"><span class="emoji">🧸</span>Teddy Bear<small>a cuddly one</small></button>
+    <button class="gift" data-choice="A Book"><span class="emoji">📖</span>A Book<small>a little story</small></button>
+    <button class="gift" data-choice="Coffee"><span class="emoji">☕</span>Coffee<small>your favourite kind</small></button>
+    <button class="gift" data-choice="Tiramisu"><span class="emoji">🍰</span>Tiramisu<small>a sweet treat</small></button>
+    <button class="gift" data-choice="Rasmalai"><span class="emoji">🤍</span>Rasmalai<small>extra sweet for you</small></button>
+    <button class="gift" data-choice="100 Times Sorry" id="hundredChoice"><span class="emoji">💌</span>100 Times Sorry<small>open my 100 apologies</small></button>
+  </div>
+  <div class="choice" id="choiceMessage" role="status"><strong>Your wish is my command princess 💗</strong><span id="choiceText">Consider it done.</span></div>
+  <div class="sorry-cta">
+    <button class="primary" id="sorryButton">Read my 100 sorrys 💌</button>
+    <div class="note">No matter what you choose I just want to make you smile.</div>
+  </div>
+  <footer>Made with all my love for Nini ♡</footer>
+</section>
+
+<section id="sorryPage">
+  <header class="sorry-header">
+    <div class="eyebrow">a hundred little apologies ♡</div>
+    <h1>100 TIMES SORRY NINI 💗</h1>
+    <p>I typed every single one out for you Jaan.</p>
+    <div class="hero-art" aria-hidden="true">💌 🧸 💞</div>
+  </header>
+  <article class="card">
+    <div class="sorry-cloud" id="sorryCloud" aria-label="One hundred apologies"></div>
+    <div class="sorry-bottom">
+      <strong>Jaan I typed this all out for you 🥺</strong>
+      Every single sorry is from my heart. I know saying sorry is only the beginning. I want to show you how much you mean to me through my actions too.
+      <br><strong style="margin-top:18px">I love you Nini ❤️</strong>
+      <button class="back" id="backButton">Go back to my letter ♡</button>
+    </div>
+  </article>
+  <footer>Forever your sorry man ♡</footer>
+</section>
+</main>
+<script>
+const apologies = [
+"sorry","sorry","soryy","sorry","sorrry","sorry","sory","sorry","sorrry","sorry",
+"sorry","soryy","sorry","soyy","sorry","sory","sorry","sorrry","sorry","soryy",
+"sorry","sorry","sorrry","sory","sorry","sorry","soryy","sorry","sorrry","sorry",
+"sorry","soryy","sorry","sory","sorry","sorrry","sorry","sorry","soyy","sorry",
+"soryy","sorry","sorry","sorrry","sorry","sory","sorry","sorry","soryy","sorry",
+"sorry","sorrry","sorry","soryy","sorry","soyy","sorry","sory","sorry","sorrry",
+"sorry","sorry","soryy","sorry","sorrry","sorry","sory","sorry","soryy","sorry",
+"sorrry","sorry","sorry","soryy","sorry","soyy","sorry","sory","sorrry","sorry",
+"sorry","soryy","sorry","sorrry","sorry","sorry","sory","sorry","soryy","sorry",
+"sorrry","sorry","sorry","soryy","sorry","sory","sorry","sorry","sorrry","sorry"
+];
+const cloud=document.getElementById('sorryCloud');
+apologies.forEach((word,i)=>{const el=document.createElement('div');el.className='sorry-word';el.textContent=word;el.style.setProperty('--tilt',`${(i%5-2)*1.1}deg`);cloud.appendChild(el)});
+const home=document.getElementById('homePage'), sorry=document.getElementById('sorryPage');
+function showSorry(){home.style.display='none';sorry.style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+function showHome(){sorry.style.display='none';home.style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+document.getElementById('sorryButton').addEventListener('click',showSorry);
+document.getElementById('hundredChoice').addEventListener('click',showSorry);
+document.getElementById('backButton').addEventListener('click',showHome);
+document.querySelectorAll('.gift').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.gift').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  if(btn.dataset.choice==='100 Times Sorry'){showSorry();return}
+  document.getElementById('choiceText').textContent=`You picked ${btn.dataset.choice}. Consider it done. 💗`;
+  document.getElementById('choiceMessage').classList.add('show');
+}));
+</script>
+</body>
+</html>
